@@ -3,21 +3,20 @@ package main
 import (
 	"fmt"
 	"net/http"
+	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		if r.URL.Path == "static/style.css" {
-			w.Header().Set("Content-Type", "text/css")
-	
-			http.ServeFile(w, r, "static/home.css")
-			return
-		}
-		http.ServeFile(w, r, "views/home.html")
+	r := gin.Default()
+	r.LoadHTMLGlob("views/*.html")
+
+	// Define a route for serving CSS file
+	r.Static("/static", "./static")
+
+	r.GET("/", func(c *gin.Context) {
+		c.HTML(http.StatusOK, "home.html", nil)
 	})
-	
 
 	fmt.Println("Servindo na porta 8080...")
-	http.ListenAndServe(":8080", nil)
+	r.Run(":8080") // Use Gin's Run function to start the server
 }
-

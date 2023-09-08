@@ -4,6 +4,7 @@ FROM golang:1.20
 WORKDIR /build
 
 # Copie os arquivos necessários para o diretório de trabalho
+COPY go.mod go.sum ./
 COPY static ./static
 COPY views ./views
 COPY main.go ./
