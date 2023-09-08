@@ -1,0 +1,114 @@
+
+
+body{
+    background-color: #FFF5E1;
+    margin: 0; /* Remover margens padrão do body */
+}
+header{
+    background-color:#8E3246;
+    /* Outras propriedades para ajustar o tamanho e posicionamento */
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+    padding: 0 10%;
+    height: 4.5em;
+    font-size: 15px;
+    color: #fff;  
+    box-shadow: 1px 1px 4px #1c1c1c;  
+
+}
+
+.navigation_header img{
+    margin-right: 400px; /* Adicione o valor de espaçamento desejado aqui */
+    width: 60px;;
+
+}
+
+
+.header,
+.navigation_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navigation_header a{
+    text-decoration: none;
+    color: #FFF5E1;
+    transition: 1s;
+    font-weight: bold;
+    padding-left: 10px;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.navigation_header{
+    gap: 5em;
+    z-index: 4;
+}
+.login{
+    border-radius: 20px;
+    color: black;
+}
+
+.avatar{
+        width: 600px; /* Defina a largura desejada aqui */
+        float: right;
+        margin: 10px; /* Adicione uma margem para criar espaço entre a imagem e o texto */
+        margin-top: 50px;
+}
+section{
+    flex-wrap: inherit;
+}
+
+.text-container {
+        margin: 150px;
+        float: left;
+        font-size: 40px;
+        font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color: #8A4040;
+}
+
+.container-carrossel{
+    display: flex;
+    justify-content: center;
+    margin-top:20em;
+
+}
+
+.container-conteudo img{
+    width: 300px;
+    margin-top: 150%;
+}
+
+.container-conteudo h3 {
+    margin-left: 5em;
+}
+
+footer{
+    margin-top: 20em;
+   
+}
+
+.footer p{
+    display: flex;
+    justify-content: center;
+    color: #8E3246;
+    font-size: 14px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding-top: 30px;
+    padding-bottom: 30px;
+  
+}
+
+.img_logo {
+    display: block;
+    margin: 0 auto; 
+}
+
+
+.footer hr {
+    border: 1px solid #8A4040;
+
+}
+
